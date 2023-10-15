@@ -35,7 +35,7 @@ public class PrimaryController {
         for (Cancion c : listaCanciones ) {
 
             HBox hb = new HBox(10);//hbox para ubicar info de cada cancion
-            Label lbp = new Label(c.getPosActual() + "");
+            Label lbp = new Label(c.getPosActual() + ".");
             lbp.setStyle("-fx-font-weight: bold;-fx-font-size: 40;");
             ImageView iv = new ImageView();
             try {
@@ -94,11 +94,12 @@ public class PrimaryController {
                 }
                 Label lbP = new Label(p + "");
                 lbP.setStyle("-fx-font-weight: bold;-fx-font-size: 30;");
+                
                 prev = p;
                 ImageView iv = new ImageView();
                 try {
                     Image img = new Image(new FileInputStream("img/" + ruta));
-                    iv.setImage(img);
+                    iv.setImage(img); 
 
                 } catch (FileNotFoundException ex) {
                     ex.printStackTrace();
